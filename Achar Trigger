@@ -1,0 +1,9 @@
+select * from sys.triggers
+
+trg_proposta
+
+select so.name, text
+from sysobjects so, syscomments sc
+where type = 'TR'
+and so.id = sc.id
+and text like '%proposta%'
